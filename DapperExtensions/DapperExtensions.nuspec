@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata schemaVersion="2">
-    <id>DapperExtensions</id>
-    <version>1.6.3</version>
+    <id>k1vs.DapperExtensions</id>
+    <version>1.6.4</version>
     <authors>Thad Smith, Page Brooks</authors>
     <owners>Thad Smith, Page Brooks</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <projectUrl>https://github.com/tmsmith/Dapper-Extensions</projectUrl>
+    <projectUrl>https://github.com/bhukivskyi/Dapper-Extensions</projectUrl>
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A small library that complements Dapper by adding basic CRUD operations (Get, Insert, Update, Delete) for your POCOs. For more advanced querying scenarios, Dapper Extensions provides a predicate system.</description>
+    <description>FORK - https://github.com/tmsmith/Dapper-Extensions. A small library that complements Dapper by adding basic CRUD operations (Get, Insert, Update, Delete) for your POCOs. For more advanced querying scenarios, Dapper Extensions provides a predicate system.</description>
     <releaseNotes>
+	  1.6.4
+	  * Fixed type map for async
       1.6.2 / 1.6.3
       * Exposed Ignore keys on update in usages of Implementor
       1.6.1
