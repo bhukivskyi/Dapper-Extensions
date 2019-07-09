@@ -158,7 +158,7 @@ namespace DapperExtensions
         /// </summary>
         public static Task InsertAsync<T>(this IDbConnection connection, IEnumerable<T> entities, IDbTransaction transaction = null, int? commandTimeout = default(int?)) where T : class
         {
-            return Instance.InsertAsync(connection, entities, transaction, commandTimeout);
+            return Instance.InsertAsync<T>(connection, entities, transaction, commandTimeout);
         }
         /// <summary>
         /// Executes an insert query for the specified entity, returning the primary key.  
@@ -168,28 +168,28 @@ namespace DapperExtensions
         /// </summary>
         public static Task<dynamic> InsertAsync<T>(this IDbConnection connection, T entity, IDbTransaction transaction = null, int? commandTimeout = default(int?)) where T : class
         {
-            return Instance.InsertAsync(connection, entity, transaction, commandTimeout);
+            return Instance.InsertAsync<T>(connection, entity, transaction, commandTimeout);
         }
         /// <summary>
         /// Executes an update query for the specified entity.
         /// </summary>
         public static Task<bool> UpdateAsync<T>(this IDbConnection connection, T entity, IDbTransaction transaction = null, int? commandTimeout = null, bool ignoreAllKeyProperties = false) where T : class
         {
-            return Instance.UpdateAsync(connection, entity, transaction, commandTimeout, ignoreAllKeyProperties);
+            return Instance.UpdateAsync<T>(connection, entity, transaction, commandTimeout, ignoreAllKeyProperties);
         }
         /// <summary>
         /// Executes a delete query for the specified entity.
         /// </summary>
         public static Task<bool> DeleteAsync<T>(this IDbConnection connection, T entity, IDbTransaction transaction = null, int? commandTimeout = null) where T : class
         {
-            return Instance.DeleteAsync(connection, entity, transaction, commandTimeout);
+            return Instance.DeleteAsync<T>(connection, entity, transaction, commandTimeout);
         }
         /// <summary>
         /// Executes a delete query using the specified predicate.
         /// </summary>
         public static Task<bool> DeleteAsync<T>(this IDbConnection connection, object predicate, IDbTransaction transaction = null, int? commandTimeout = null) where T : class
         {
-            return Instance.DeleteAsync(connection, predicate, transaction, commandTimeout);
+            return Instance.DeleteAsync<T>(connection, predicate, transaction, commandTimeout);
         }
 
         /// <summary>
